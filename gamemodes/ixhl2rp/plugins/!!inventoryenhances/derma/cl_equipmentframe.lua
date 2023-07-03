@@ -378,19 +378,14 @@ function PANEL:Paint()
 	local anim1 = TimedSin(.9, 36, 99, 100)
 	local anim2 = TimedSin(.9, 39, 89, 100)
 	local prolongedW = TimedSin(.95, 8, 20, 33)
-	--derma.SkinFunc("PaintCategoryPanel", self, "", ix.config.Get("color") or color_white)
+	derma.SkinFunc("PaintCategoryPanel", self, "", ix.config.Get("color") or color_white)
 	surface.SetDrawColor(color_white)
 	surface.SetMaterial(frame)
 	surface.DrawTexturedRect(0, 0, self:GetWide(), self:GetTall())
 
 	draw.RoundedBox(0, anim1, 32 * .33, prolongedW, 2, colors[1])
 	draw.RoundedBox(0, -anim2 + 66, 32 * .7, prolongedW, 2, colors[2])
-
-	--surface.SetFont("cellar.main.btn")
-	--surface.SetTextColor(Color(255,255,255,255))
-	--surface.SetTextPos(4, 4)
-	--surface.DrawText("Снаряжение")
-	--draw.SimpleText("Снаряжение", "cellar.main.btn", self:GetWide()/2, self:GetTall() * .035, color_white, TEXT_ALIGN_CENTER, TEXT_ALIGN_CENTER)
+	draw.SimpleText("Снаряжение", "cellar.main.btn", self:GetWide()/2, self:GetTall() * .035, color_white, TEXT_ALIGN_CENTER, TEXT_ALIGN_CENTER)
 end
 
 vgui.Register("ixEquipment", PANEL, "DPanel")
